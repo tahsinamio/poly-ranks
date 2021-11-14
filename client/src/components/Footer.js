@@ -3,13 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer class="page-footer blue darken-1">
+      <footer class="page-footer teal darken-4">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">DoctorRatingsBD</h5>
+              <h5 class="white-text">PolyRanks</h5>
               <p class="grey-text text-lighten-4">
-                See what people have to say about your local doctors
+                Instructors ranked by class
               </p>
             </div>
             {/* <div class="col l4 offset-l2 s12">

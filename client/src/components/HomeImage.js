@@ -13,7 +13,7 @@ const HomeImage = () => {
               objectPosition: "45% 50%",
               opacity: "1",
             }}
-            src="/kendal-L4iKccAChOc-unsplash.jpg"
+            src="/Visit_hero_campus_above.jpeg"
             alt="home_image"
           />
         </div>

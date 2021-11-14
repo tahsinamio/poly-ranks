@@ -24,7 +24,7 @@ class SearchBar extends Component {
             <form>
               <div class="input-field">
                 <input
-                  className="indigo accent-1"
+                  className="teal accent-4"
                   id="search"
                   type="search"
                   onChange={(event) =>

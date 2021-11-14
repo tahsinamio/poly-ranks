@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 const Landing = () => {
   return (
     <div>
-      <h4>Find a Doctor.</h4>
+      <h4>Search For a Class.</h4>
       <div>
         <SearchBar />
       </div>
