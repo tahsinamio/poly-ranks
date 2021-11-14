@@ -1,5 +1,5 @@
 import React from "react";
-import DoctorCard from "./DoctorCard";
+import ClassCard from "./ClassCard";
 
 class SearchResults extends React.Component {
 
@@ -13,7 +13,7 @@ class SearchResults extends React.Component {
           key={this.props.id}
         >
           <a href={`/doctors/${this.props._id}`}>
-            <DoctorCard {...this.props}/>
+            <ClassCard {...this.props}/>
           </a>
         </div>
       </div>

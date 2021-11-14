@@ -1,7 +1,7 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 
-class DoctorCard extends React.Component {
+class ClassCard extends React.Component {
 
 
   render() {
@@ -11,7 +11,8 @@ class DoctorCard extends React.Component {
           <div class="card white hoverable">
             <div class="card-content black-text">
               <span class="card-title">{this.props.name}</span>
-              <ReactStars
+              <p>{this.props.specialty}</p>
+              {/* <ReactStars
                 value={this.props.rating / this.props.evals}
                 count={5}
                 size={24}
@@ -21,7 +22,7 @@ class DoctorCard extends React.Component {
               />
               <span style={{ size: "5px" }}>{this.props.evals} ratings</span>
               <p>{this.props.specialty}</p>
-              <p>{this.props.hospital}</p>
+              <p>{this.props.hospital}</p> */}
             </div>
           </div>
         </div>
@@ -30,4 +31,4 @@ class DoctorCard extends React.Component {
   }
 }
 
-export default DoctorCard;
+export default ClassCard;
