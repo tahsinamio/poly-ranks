@@ -5,11 +5,17 @@ const keys = require("./config/keys");
 const passport = require("passport");
 const bodyParser =require("body-parser");
 require("./models/User");
-require("./models/Doctor");
+require("./models/Class");
 require("./models/Review")
 require("./services/passport");
 
 mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// let client = mongoose.connect(keys.mongoURI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// }).then(e => console.log(e));
+
 
 const app = express();
 
@@ -25,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require("./routes/authRoutes")(app);
-require("./routes/doctorRoutes")(app);
+require("./routes/classRoutes")(app);
 require("./routes/reviewRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {

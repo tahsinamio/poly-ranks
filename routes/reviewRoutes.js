@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const requireLogin = require("../middlewares/requireLogin");
 
 const Review = mongoose.model("reviews");
-const Doctor = mongoose.model("doctors");
+const Class = mongoose.model("classes");
 
 module.exports = (app) => {
   app.post("/api/fetchreviews", async (req, res) => {

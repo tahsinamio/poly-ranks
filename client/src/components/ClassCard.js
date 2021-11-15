@@ -11,7 +11,7 @@ class ClassCard extends React.Component {
           <div class="card white hoverable">
             <div class="card-content black-text">
               <span class="card-title">{this.props.name}</span>
-              <p>{this.props.specialty}</p>
+              <p>{this.props.profList.length}</p>
               {/* <ReactStars
                 value={this.props.rating / this.props.evals}
                 count={5}

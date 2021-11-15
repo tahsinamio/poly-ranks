@@ -8,11 +8,11 @@ class SearchResults extends React.Component {
       <div>
         <div
           onClick={() => {
-            window.location = "/doctor";
+            window.location = "/class";
           }}
           key={this.props.id}
         >
-          <a href={`/doctors/${this.props._id}`}>
+          <a href={`/classes/${this.props._id}`}>
             <ClassCard {...this.props}/>
           </a>
         </div>

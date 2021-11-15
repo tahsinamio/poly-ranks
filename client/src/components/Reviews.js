@@ -5,33 +5,30 @@ import { fetchReviews } from "../actions";
 
 class Reviews extends Component {
   componentDidMount() {
-    this.props.fetchReviews(window.location.pathname.split("/").slice(-1)[0]);
+    this.props.fetchClass(window.location.pathname.split("/").slice(-1)[0]);
   }
-  
+
   renderReviews() {
-    return this.props.reviews.reverse().map(reviews => {
+    console.log(this.props);
+    return this.props.name.map((prof) => {
       return (
         <ul>
           <li>
-            <ReviewCard {...reviews} />
+            <ReviewCard {...prof} />
           </li>
         </ul>
       );
-    })
+    });
   }
 
   render() {
-    return (
-      <div>
-        {this.renderReviews()}
-      </div>
-    );
+    return <div>{this.renderReviews()}</div>;
   }
 }
 
 
 function mapStateToProps(state) {
-  return { reviews: state.reviews };
+  return { class: state.class };
 }
 
 export default connect(mapStateToProps, { fetchReviews })(Reviews);

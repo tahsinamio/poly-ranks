@@ -7,14 +7,14 @@ import Header from "./Header";
 import Footer from "./Footer";
 import HomeImage from "./HomeImage";
 import Landing from "./Landing";
-import DoctorPage from "./DoctorPage";
+import ClassPage from "./ClassPage";
 import Admin from "./Admin";
 import DoctorNew from "./surveys/DoctorNew";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-  }
+  // componentDidMount() {
+  //   this.props.fetchUser();
+  // }
 
   render() {
     return (
@@ -24,7 +24,7 @@ class App extends Component {
           <Route exact path="/" component={HomeImage} />
           <div className="container" style={{ paddingBottom: "500px" }}>
             <Route exact path="/" component={Landing} />
-            <Route path="/doctors" component={DoctorPage} />
+            <Route path="/classes" component={ClassPage} />
             <Route path="/admin" component={Admin} />
             <Route path="/create/doctor" component={DoctorNew} />
           </div>

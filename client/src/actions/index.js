@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_USER, POST_DOCTOR, POST_SEARCH_VAL, FETCH_DOCTOR, POST_REVIEW, FETCH_REVIEWS } from "./types";
+import { FETCH_USER, POST_DOCTOR, POST_SEARCH_VAL, FETCH_CLASS, POST_REVIEW, FETCH_REVIEWS } from "./types";
 
 export const fetchUser = () => async (dispatch) => {
   const res = await axios.get("/api/current_user");
@@ -15,15 +15,15 @@ export const submitDoctorForm = (values, history) => async (dispatch) => {
 };
 
 export const postSearchValue = (value) => async (dispatch) => {
-  const res = await axios.post("/api/searchdoctor", { value });
+  const res = await axios.post("/api/searchclass", { value });
 
   dispatch({ type: POST_SEARCH_VAL, payload: res.data });
 };
 
-export const fetchDoctor = (doctorID) => async (dispatch) => {
-  const res = await axios.post("/api/fetchdoctor", { doctorID });
+export const fetchClass = (classID) => async (dispatch) => {
+  const res = await axios.post("/api/fetchclass", { classID });
 
-  dispatch({ type: FETCH_DOCTOR, payload: res.data })
+  dispatch({ type: FETCH_CLASS, payload: res.data });
 };
 
 export const postReview = (id, reviewbody, stars) => async (dispatch) => {
