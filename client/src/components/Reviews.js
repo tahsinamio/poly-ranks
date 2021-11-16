@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { fetchReviews } from "../actions";
 
 class Reviews extends Component {
-  componentDidMount() {
-    this.props.fetchClass(window.location.pathname.split("/").slice(-1)[0]);
+  constructor() {
+    super();
   }
 
   renderReviews() {
@@ -26,9 +26,4 @@ class Reviews extends Component {
   }
 }
 
-
-function mapStateToProps(state) {
-  return { class: state.class };
-}
-
-export default connect(mapStateToProps, { fetchReviews })(Reviews);
+export default Reviews;

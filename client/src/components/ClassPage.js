@@ -23,37 +23,6 @@ class ClassPage extends Component {
     return (
       <div>
         {this.renderClass()}
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Rating</th>
-              <th>Evals</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>#1</td>
-              <td>Abel, Christian</td>
-              <td>3.22</td>
-              <td>37</td>
-            </tr>
-            <tr>
-              <td>#2</td>
-              <td>Eagon, Scott</td>
-              <td>3.03</td>
-              <td>33</td>
-            </tr>
-            <tr>
-              <td>#3</td>
-              <td>Bailey, Karl</td>
-              <td>2.89</td>
-              <td>33</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     );
   }
